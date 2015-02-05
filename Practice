@@ -1,0 +1,293 @@
+// Below is a series of functions, each function has a
+// description before it that explains what each of them
+// should do. Complete the function so that it satisfies
+// it's description.
+
+
+
+// 1.
+// Should always return the value 5
+
+function giveMeFive() {
+    var alwaysFive = 5;
+    return alwaysFive;
+}
+// call function :: return always 5
+    giveMeFive(); 
+
+//---------
+
+// 2.
+// This function should accept 1 parameter
+// and return the exact same thing. This type
+// of function is called a no-op as in (no operation)
+
+function noOp(anyValue) {
+    return anyValue;
+}
+
+// call function :: return "Anything"
+noOp("Anything"); 
+
+//---------
+
+// 3.
+// This function should accept 1 parameter; a number.
+// It should return the number doubled. Doubled meaning
+// it should return a number twice the size as the number
+// that is passed in.
+
+function double(number) {
+    return number* 2;
+}
+
+//call function :: return 18
+double(9); // 
+
+//---------
+
+// 4.
+// This function should accept 1 parameter; a number.
+// It should return the number squared. Squared meaning
+// it should return the number multiplied by itself.
+
+function square(number) {
+    return number * number;
+}
+
+// call function :: return 81
+square(9); 
+
+//---------
+
+// 5.
+// This function should accept 1 parameter; an array
+// of numbers. It should calculate the sum (the total
+// of all the numbers in the array added together)
+// and return it.
+
+// calculate array content without using loop
+function sum(arr) {
+  var arr = [1,2,3,4,5];
+ 
+  return arr[0] + arr[1] + arr[2] + arr[3] + arr[4];
+}
+
+// calculate array content using loop
+function sum(arr) {
+    var total = 0;
+    for (i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+
+//call function
+ sum(arr = [1,2,3,4,5]); 
+
+//---------
+
+// 6.
+// This function should accept 1 parameter; a single
+// letter string (like "g".) It should return the index
+// of that letter in the alphabet. For example "a" would
+// be 1 and "z" would be 26. This should work for both
+// lowercase and capital letters.
+
+// HINT: use an array and a for loop
+
+function letterIndex(letter) {
+ // Print Numbers
+  var numbers = [2,5,7,32, 12];
+  for (var index = 0; index < numbers.length; index++) {
+    var currentNumber = numbers[index];
+    console.log(currentNumber);
+ }  
+ }
+
+// Print Letters
+function letterIndex(letter) {
+  // var letters= "a,b,c,d,e,f,g,h,i,j,kl,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+  //turn letters into an array
+  letters.split("");
+
+  for (var i= 1; i <= letters.length; i++) {
+    var currentLetter = letters[i];
+        if (currentLetter === "a") {
+    console.log(currentLetter) + " " + console.log(i);
+    }
+    }
+}
+
+//NEW TRY
+// Print Letters
+function letterIndex(singleLetter) {
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+  //turn letters into an array
+  letters.split("");
+
+    for(i = 0; i < letters.length; i++) {
+         var currentLetter = letters[i];
+        if (currentLetter === (singleLetter.toLowerCase() || singleLetter.toUpperCase()) ) {
+            return i;
+        }
+    }
+}
+
+//call function :: return 18
+letterIndex("S");
+
+//PREPARE FOR NEXT
+//NEW TRY
+// Print Letters
+function letterIndex(letterPosition) {
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+  //turn letters into an array
+  letters.split(",");
+
+ return letters[(letterPosition)];
+}
+//---------
+
+// 7.
+// This function should accept 1 parameter; a number.
+// It should return the letter that corresponds with
+// that number. For example, 1 would be "a" and 26
+// would be "z". This is the inverse of the previous
+// function.
+
+// Note: this needs to work for numbers larger than 26.
+// For example 27 should loop back around to "a".
+
+// HINT: use an array and the modulo (%) operator
+
+function reverseLetterIndex() {
+
+}
+
+//---------
+
+// 8.
+// This function should accept 1 parameter; a string.
+// It should shift every letter in the string by 13
+// places. This is a form of Caesar cipher known as
+// ROT-13. If you are unsure of exactly what you are
+// supposed to do read the wikipedia article that explains
+// it quite well: http://en.wikipedia.org/wiki/ROT13
+
+// HINT: use the previous 2 functions
+
+function rot13() {
+
+}
+// From the class
+function sayHi () {
+  return num * 2;
+  console.log("Your output is" + sayHi("Me"));
+}
+//call the function
+sayHi("Me");
+
+function sayGoodBye(name) {
+	sayHi(name);
+	alert("Good Bye");
+}
+//call the function
+sayGoodBye("Slavica");
+
+//new exersice; always alert "Hi" will be executed
+
+function alertHi() {
+	var iDontLikeYou;
+	if (iDontLikeYou) {
+	return;
+	}
+	alert ("Hi");
+	}
+
+// New Exersice : Anonymus Function
+function () {
+	
+}
+
+// Array
+var arr ["a", "b", "c", "d"];
+for (var i = 0; i < arr.length; i++;) {
+	console.log(arr.[i]);
+}
+
+// Not working
+function reverseSentence(str) {
+  return = str.split("").reverse.join("");
+
+}
+//
+function basics(week) {
+  weeks = ["Mon","Tue","Wend","Thrs","Fri","Sut","Sun"];
+  return weeks[week];
+}
+
+var show = function(msg) {
+  document.body.innerHML = msg;
+}
+
+function firstValue(myArray, index) {
+ //   var lenghtOfArray = myArray.length;
+ //   var lenghtIndex = lenghtOfArray - 1; // return last value in array
+ //   return  myArray[myArray.length -1]; // return last value in array
+  return  myArray[index]; // return last value in array
+  
+ //   return myArray[0]; // return first array
+}
+
+var letters = ["a," "b", "c", "d"];
+//var str = arr.join(""); //"a,b,c // "abc"
+//var letters = firstValue(letters);
+var letters = firstValue(letters, 0);
+
+//show("Hello world");
+show(letter);
+
+unction processWord(word) {
+  var letters = word.split("");
+  var processLetter = [];
+  var processLetter;
+  var letter;
+  for (var index = 0; index < letters.length; index++;) {
+    letter = letters [index];
+    processedLetter = processLetter(letter);
+    processedLetter.push(processedLetter);
+  }
+  var processedWord = processedLetter.join("");
+  return processedWord;
+}
+
+////////From Class/////////////
+function letterIndex(letter) {
+  var index;
+  map = {
+    "a" : 0,
+    "b" : 1,
+    "c" : 2,
+    "d" : 3,
+    "e" : 4,
+    "f" : 5,
+    "g" : 6,
+    "h" : 7,
+    "i" : 8,
+    "a" : 0,
+    "b" : 1,
+    "c" : 2,
+    "d" : 3,
+    "e" : 4,
+    "f" : 5,
+    "g" : 6,
+    "h" : 7,
+    "i" : 8,
+  };
+
+  index = map [letter];
+
+  return index;
+}
