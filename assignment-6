@@ -150,7 +150,7 @@ reverseLetterIndex(19);
 
 // HINT: use the previous 2 functions
 //Used two previously created function to shift single letter
-//to be continue...
+//to be continued ...
 function rot13(letter) {
   
   return reverseLetterIndex((letterIndex(letter) + 13));
